@@ -16,7 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import type { PropsWithChildren } from "react";
-import type { Player } from "../../server/api/routers/player";
+import type { Player } from "../../helpers/api";
 import { api } from "../../utils/api";
 
 const Page = () => {
@@ -230,7 +230,7 @@ const StatsBlock = ({ statistics, labels }: StatsValueProps) => {
 
 export default Page;
 
-export const CardBox = (props: PropsWithChildren) => (
+export const CardBox = (props: PropsWithChildren<{ pt?: "sm" }>) => (
   <Box
     sx={(theme) => ({
       backgroundColor:
@@ -239,6 +239,7 @@ export const CardBox = (props: PropsWithChildren) => (
           : theme.colors.gray[1],
       textAlign: "center",
       padding: theme.spacing.md,
+      paddingTop: props.pt === "sm" ? theme.spacing.xs : theme.spacing.md,
       borderRadius: theme.radius.md,
     })}
   >

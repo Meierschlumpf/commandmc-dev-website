@@ -1,6 +1,7 @@
 import { readFileSync } from "fs";
 import { parse } from "../nbt";
 
+// TODO: somehow the friend list is not filled with the correct data
 export const parseNbtFile = async <TResult>(filePath: string) =>
   new Promise<TResult>((resolve, reject) => {
     const fileData = readFileSync(filePath);

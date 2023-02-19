@@ -1,18 +1,17 @@
 import {
+  ActionIcon,
   Card,
   Container,
   Group,
   Stack,
   Title,
-  Text,
-  ActionIcon,
 } from "@mantine/core";
 import { IconExternalLink } from "@tabler/icons-react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import type { Player } from "../server/api/routers/player";
+import type { Player } from "../helpers/api";
 
 import { api } from "../utils/api";
 
